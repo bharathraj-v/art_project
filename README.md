@@ -1,1 +1,1 @@
-## Art generator from text prompts
+## Art generation platform
