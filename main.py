@@ -1,12 +1,11 @@
 import os
 import tensorflow as tf
-import IPython.display as display
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
 import PIL.Image
 import time
 import functools
+import gradio as gr
+import tensorflow_hub as hub
 
 
 def tensor_to_image(tensor):
@@ -18,43 +17,34 @@ def tensor_to_image(tensor):
   return PIL.Image.fromarray(tensor)
 
 
-def load_img(path_to_img):
+def convert_img(img):
   max_dim = 512
-  img = tf.io.read_file(path_to_img)
-  img = tf.image.decode_image(img, channels=3)
   img = tf.image.convert_image_dtype(img, tf.float32)
-
   shape = tf.cast(tf.shape(img)[:-1], tf.float32)
   long_dim = max(shape)
   scale = max_dim / long_dim
-
   new_shape = tf.cast(shape * scale, tf.int32)
-
   img = tf.image.resize(img, new_shape)
   img = img[tf.newaxis, :]
   return img
 
+def style_transfer(content, style):
+    hub_model = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
+    content = convert_img(content)
+    style = convert_img(style)
+    stylized_image = hub_model(tf.constant(content), tf.constant(style))[0]
+    return tensor_to_image(stylized_image)
 
-def imshow(image, title=None):
-  if len(image.shape) > 3:
-    image = tf.squeeze(image, axis=0)
+content = gr.inputs.Image(shape=None, image_mode="RGB", invert_colors=False, source="upload", tool="editor", type="numpy", label="content", optional=False)
+style = gr.inputs.Image(shape=None, image_mode="RGB", invert_colors=False, source="upload", tool="editor", type="numpy", label="Style", optional=False)
 
-  plt.imshow(image)
-  if title:
-    plt.title(title)
-
-os.environ['TFHUB_MODEL_LOAD_FORMAT'] = 'COMPRESSED'
-
-mpl.rcParams['figure.figsize'] = (12, 12)
-mpl.rcParams['axes.grid'] = False
-
-content_path = "con1.jpg"
-style_path = "3.jpg"
-content_image = load_img(content_path)
-style_image = load_img(style_path)
-
-plt.subplot(1, 2, 1)
-imshow(content_image, 'Content Image')
-
-plt.subplot(1, 2, 2)
-imshow(style_image, 'Style Image')
+ui = gr.Interface(
+    style_transfer, title = "artsy",
+    description = "The Style Transfer Demo   |   ***Team Aesthetes***   |   Project Sprint TTC",
+    article = "Converts your images into artistic paintings. "
+    + "Upload your image in content and an artistic image in style"
+    + ". Made by Bharath Raj and Raghav Dabral for Project Sprint by TTC",
+    theme = "peach",
+    inputs=[content, style], outputs=["image"],
+    live=False)
+ui.launch(debug=True, enable_queue=True)
