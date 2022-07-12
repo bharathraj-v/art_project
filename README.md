@@ -1,4 +1,4 @@
-# Mozart: An AI Art Platform
+# Mozart: A Generative Art Platform
 
 Mozart is a machine learning art platform that generates art via text prompts, transfer style on images to make them look artistic, and increase the resolution of pictures, all built into a single web-app, presently using Gradio 3.0.
 
