@@ -4,4 +4,4 @@ Mozart is a machine learning art platform that generates art via text prompts, t
 
 * [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer) for transferring an image's style into another image.
 * [VQGAN+CLIP](https://github.com/mfrashad/text2art) for generating art from text prompts.
-* [Torch-SRGAN](https://deepai.org/machine-learning-model/torch-srgan) for super resolution.
+* [Torch-SRGAN](https://deepai.org/machine-learning-model/torch-srgan) for Super-Resolution.
