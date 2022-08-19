@@ -327,13 +327,13 @@ Conditional GANs for tasks requiring the creation of fresh examples are where GA
 - Creating Art: The ability to create original, artistic drawings, paintings, and more.
 - Image-to-Image Translation: The ability to convert images between different climes, including day and night, summer and winter, and more.
 
-One of the major reasons that GANs are widely studied, developed, and used is because of their success. GANs have been able to generate photos so realistic that humans are unable to tell that they are of objects, scenes, and [people that do not exist in real life]().
+One of the major reasons that GANs are widely studied, developed, and used is because of their success. GANs have been able to generate photos so realistic that humans are unable to tell that they are of objects, scenes, and [people that do not exist in real life](https://this-person-does-not-exist.com/en).
 
 The success of GANs is one of the main causes for the widespread study, creation, and application of these algorithms. Humans are unable to distinguish between [people created by GANs](https://this-person-does-not-exist.com/en) and real people because they are so lifelike.
 
 <img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/dnefe.jpg" alt="img" style="zoom:50%;" />
 
-​                                                                                      [_Pictures generated from [This Person Does Not Exist](https://this-person-does-not-exist.com/en)_](https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/dnefe.jpg)
+​                                                                                      [_Pictures generated from This Person Does Not Exist_](https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/dnefe.jpg)
 
 
 
