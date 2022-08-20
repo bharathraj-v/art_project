@@ -167,11 +167,15 @@ They have three main types of layers, which are:
   2. The kernel's stride is how many pixels or how far it travels across the input matrix. Despite the rarity of stride values of two or higher, a longer stride results in a lesser output.
 
   3. The process of symmetrically adding zeroes to the input matrix is known as [zero-padding](https://medium.com/@draj0718/zero-padding-in-convolutional-neural-networks-bf1410438e99). It is a widely used modification that enables the input size to be changed to meet the needs. It's typically utilized when the filters don't work with the input image. This results in a larger or equally sized output by setting any elements that are not part of the input matrix to zero. There are three different kinds of padding:
-  - Valid padding: This is sometimes referred to as no padding. In this situation, if dimensions do not line up, the final convolution is dropped.
-    
-  - Same padding: By using this padding, the output layer is guaranteed to be the same size as the input layer.
-    
-  - Full padding: This kind of padding enlarges the output by padding the input border with zeros.
+  
+     - Valid padding: This is sometimes referred to as no padding. In this situation, if dimensions do not line up, the final convolution is dropped.
+       
+  
+     - Same padding: By using this padding, the output layer is guaranteed to be the same size as the input layer.
+       
+  
+     - Full padding: This kind of padding enlarges the output by padding the input border with zeros.
+  
   
   A CNN performs a [Rectified Linear Unit (ReLU)](https://arxiv.org/pdf/1803.08375.pdf) adjustment on the feature map following each convolution operation, adding nonlinearity to the model.
   
@@ -399,7 +403,7 @@ When a model is made into an identity function, it is compelled to store all of 
 
 <img src="https://miro.medium.com/max/700/0*dknVUIxkjQ3ZV8y0.png" alt="img" style="zoom: 67%;" />
 
-​																								 [*General architecture of an Autoencoder*](https://miro.medium.com/max/700/0*dknVUIxkjQ3ZV8y0.png)
+​																							     [*General architecture of an Autoencoder*](https://miro.medium.com/max/700/0*dknVUIxkjQ3ZV8y0.png)
 
 
 
@@ -424,4 +428,123 @@ To generate new images via a GAN, points can be sampled from a latent space. For
 
 
 ## Prompt Engineering
+
+In natural language processing (NLP), a concept known as [prompt engineering](https://arxiv.org/pdf/2109.01134v5.pdf) entails identifying inputs that produce outputs that are preferable or beneficial. In prompt engineering, the job description is included explicitly in the input, such as a question, as opposed to being provided implicitly. Typically, prompt engineering involves transforming one or more tasks into a prompt-based dataset and "prompt-based learning", also known as "prompt learning" to train a language model. Prompt engineering, also known as "prefix-tuning" or "prompt tuning," is a method wherein a big, "frozen" pretrained language model is used and just the prompt's representation is learnt. 
+
+Text-based prompts may be created using prompt engineering to get the desired picture categorization results. The model may be instructed to display "an picture of potatoes," for instance. Prompt engineering is fundamentally dependent on the form of such prompts, or the statement describing how the model detects pictures. Iterative writing is frequently necessary to come up with the finest prompt. A "snapshot of potatoes", "a gathering of potatoes", or the prompt "an image including potatoes" are all quite different things. 
+The quality of the inputs influences the quality of the outputs in most processes. It's more likely that the model will provide a constructive and relevant response when the prompts are well-designed. Understanding what the model "knows" about the world and then applying that knowledge appropriately are key to creating effective prompts.
+
+When creating model prompts, a few key ideas should be kept in mind:
+
+- **The model is guided by a prompt to provide usable output** - If a big language model with enough training data is instructed to write a summary of an article, for instance, it should be done like as illustrated below:
+
+  <img src="https://docs.cohere.ai/img/prompt-engineering/summarization-prompt-language-model.png" alt="img" style="zoom: 67%;" />
+
+​                                                                   [*This prompt has two components: the text you want summarized, and the task description*](https://docs.cohere.ai/img/prompt-engineering/summarization-prompt-language-model.png)
+
+
+
+- **To achieve the finest generations, experiment with different formulations of your prompt** - When using a generator, it might be helpful to experiment with a variety of alternative prompts for the situation at hand. Even while multiple ways of phrasing the same prompt may seem similar to humans, this might result in generations that are very distinct from one another. This may occur, for example, as a result of the model's knowledge that the various formulations are really employed in a variety of circumstances and for a variety of objectives.
+  If "In summary" in the preceding example doesn't provide the desired results, "To summarize altogether" or "The key takeaway from this text is that" can be used.
+
+  
+
+- **Describe the assignment and the general surroundings** - Additional job description elements are frequently helpful, and they usually occur after the input text that has to be processed.
+
+  <img src="https://docs.cohere.ai/img/prompt-engineering/prompt-task-description.png" alt="img" style="zoom:67%;" />
+
+Give the model sufficient context. For instance, before the article, the summarization task can be described in greater depth.
+
+<img src="https://docs.cohere.ai/img/prompt-engineering/prompt-summary-example.png" alt="img" style="zoom:67%;" />
+
+
+
+Another use case of such language models can be to help a customer satisfaction department by using them to create realistic customer answers automatically -
+
+A customer raises the following query to a company:
+
+``` html
+Hi, I'd like a refund for the coffee maker I ordered. Would that be possible?
+
+```
+
+In order to provide valuable generation for the agent working with the client, start by explaining to the model the overall situation and what the rest of the prompt will be about:
+
+``` html
+This is a conversation between a customer and a polite, helpful customer service agent.
+Question of the customer: Hi, I'd like a refund for the coffee maker I ordered. Would that be possible?
+```
+
+The model has been informed on what to anticipate, and it is evident from the query that it is a customer-related one. Next, let's display to the model the first portion of the answer that is to be provided to the client:
+
+``` html
+Response by the customer service agent: Hello, thank you for reaching out to us. Yes,
+```
+
+Notice how it is made apparent that the next statement is an answer to the query, that it comes from a customer service representative, and that favorable response is to be given. Combining all of this yields the following question:
+
+``` html
+This is a conversation between a customer and a polite, helpful customer service agent.
+Question of the customer: Hi, I'd like a refund for the coffee maker I ordered. Would that be possible?
+Response by the customer service agent: Hello, thank you for reaching out to us. Yes,
+```
+
+<img src="https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png" alt="an example of a prompt with task description, input indicator, current input, and output indicator" style="zoom:67%;" />
+
+​    [*When using several examples in the prompt, some prompt elements (such input and output indicators) are helpful in communicating a desired job to the model*](https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png)
+
+In this instance, a few customer service interactions are sufficient to obtain credible completions from the baseline model. This might be further enhanced by honing it using examples of how one wants the model to respond to different inquiries and requests.
+
+
+
+- **The preferred outcome should be shown to the model** - One of the primary strategies for producing effective generations is to supplement a prompt with examples. Examples show the model what kind of outcome is being aimed for.
+
+  <img src="https://docs.cohere.ai/img/prompt-engineering/prompt-examples.png" alt="Prompt with task description and two examples" style="zoom:67%;" />
+
+List a few examples to get different generations. This technique is known as few-shot learning. For example, if a movie review was to be categorized as favorable, unfavorable, or neutral, and the model is given the prompt as:
+
+``` html	
+Review: "I really enjoyed this movie!"
+This sentiment of this review is
+```
+
+The model might generate something like:
+
+``` html
+This sentiment of this review is apt, considering the movie's plot,
+```
+
+In such a case, the model predicts certain generations that are not the kind of generations as expected.
+
+
+
+<img src="https://docs.cohere.ai/img/prompt-engineering/prompt-example-input-output.png" alt="Example inputs and outputs in the prompt" style="zoom:67%;" />
+
+​                                                          [*Both an example input and the desired output should be included in the examples in the prompt*](https://docs.cohere.ai/img/prompt-engineering/prompt-example-input-output.png)
+
+
+
+``` html
+This is a movie review sentiment classifier.
+Review: "I loved this movie!"
+This review is positive.
+Review: "I don't know, it was ok I guess.."
+This review is neutral.
+Review: "What a waste of time, would not recommend this movie."
+This review is negative.
+Review: "I really enjoyed this movie!"
+This review is
+```
+
+
+
+This prompt may be seen in a more straightforward form as shown below:
+
+<img src="https://docs.cohere.ai/img/prompt-engineering/prompt-engineering-detailed-examples.png" alt="Example of a prompt with two examples" style="zoom:67%;" />
+
+
+
+
+
+## Pre-built Deep Learning Models
 
