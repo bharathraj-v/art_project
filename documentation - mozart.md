@@ -493,7 +493,7 @@ Response by the customer service agent: Hello, thank you for reaching out to us.
 
 ​    [*When using several examples in the prompt, some prompt elements (such input and output indicators) are helpful in communicating a desired job to the model*](https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png)
 
-In this instance, a few customer service interactions are sufficient to obtain credible completions from the baseline model. This might be further enhanced by honing it using examples of how one wants the model to respond to different inquiries and requests.
+​		In this instance, a few customer service interactions are sufficient to obtain credible completions from the baseline model. This might be further enhanced by 		honing it using examples of how one wants the model to respond to different inquiries and requests.
 
 
 
@@ -501,7 +501,7 @@ In this instance, a few customer service interactions are sufficient to obtain c
 
   <img src="https://docs.cohere.ai/img/prompt-engineering/prompt-examples.png" alt="Prompt with task description and two examples" style="zoom:67%;" />
 
-List a few examples to get different generations. This technique is known as few-shot learning. For example, if a movie review was to be categorized as favorable, unfavorable, or neutral, and the model is given the prompt as:
+List a few examples to get different generations. This technique is known as few-shot learning. For example, if a movie review was to be categorized as 	favorable, unfavorable, or neutral, and the model is given the prompt as:
 
 ``` html	
 Review: "I really enjoyed this movie!"
