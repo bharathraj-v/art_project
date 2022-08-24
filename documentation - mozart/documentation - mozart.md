@@ -570,7 +570,7 @@ The trick here is to use the weighted layers of the trained model to extract fea
 
 In computer vision, neural networks generally target the first layer's detection of edges, the middle layer's detection of shapes, and the latter layers' detection of task-specific properties. Transfer learning only uses the early and center layers; the later layers are only retrained. It uses the labelled data from the task that served as its training ground.
 
-<img src="https://www.researchgate.net/profile/Joseph-Lemley/publication/316748306/figure/fig2/AS:491777640669185@1494260334992/Illustration-of-transfer-learning-concept-where-the-rst-layers-in-network-A-and-network-B.png" alt="img" style="zoom: 67%;" />
+<img src="https://learnopencv.com/wp-content/uploads/2019/05/transfer-learning-1024x574.jpg" alt="img" style="zoom: 50%;" />
 
 
 
