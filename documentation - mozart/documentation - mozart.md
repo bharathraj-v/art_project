@@ -116,7 +116,7 @@ Machine learning's branch of deep learning models differs from other branches fo
 
 - The majority of deep learning models are very sophisticated. Artificial neural networks (ANN), on which deep learning is based, have the property that their model size can be controlled. This means that even with a fixed input dimension, the number of model parameters can be controlled by varying the number of network layers, the number of connections, and the layer size. Deep learning makes it simple to expand model complexity as a result, enabling more effective utilization of enormous amounts of data. A higher amount of data can also boost the accuracy of deep learning models. Deep learning has been the most popular machine learning architecture for reading comprehension as the area of MRC continues to develop and new datasets are created.
 
-- [Feature learning](https://arxiv.org/pdf/1301.3605.pdf) is a strong quality of deep learning. In machine learning, a model's performance is heavily influenced by [representation learning](https://arxiv.org/pdf/1206.5538.pdf)—the process by which a model learns a good representation of the data. The extraction of task-specific characteristics is an established process for traditional machine learning models. Prior to the development of deep learning, feature extraction was frequently manual and called for subject-matter expertise. Deep learning, on the other hand, uses neural networks to automatically learn useful feature representations by performing a [nonlinear transformation](https://www.researchgate.net/publication/307888996_On_the_Role_of_Nonlinear_Transformations_in_Deep_Neural_Network_Acoustic_Models#read) on the basic input features, such as word vectors and image pixels. To put it another way, deep learning successfully acquires salient features that are helpful to the target task without requiring the model designers to have specialized domain expertise, which considerably improves the efficiency of creating deep learning models for tasks from many applications.
+- [Feature learning](https://arxiv.org/pdf/1301.3605.pdf) is a strong quality of deep learning. In machine learning, a model's performance is heavily influenced by [representation learning](https://arxiv.org/pdf/1206.5538.pdf)—the process by which a model learns a good representation of the data. The extraction of task-specific characteristics is an established process for traditional machine learning models. Prior to the development of deep learning, [feature extraction](https://www.researchgate.net/publication/287743399_A_survey_of_feature_selection_and_feature_extraction_techniques_in_machine_learning#read) was frequently manual and called for subject-matter expertise. Deep learning, on the other hand, uses neural networks to automatically learn useful feature representations by performing a [nonlinear transformation](https://www.researchgate.net/publication/307888996_On_the_Role_of_Nonlinear_Transformations_in_Deep_Neural_Network_Acoustic_Models#read) on the basic input features, such as word vectors and image pixels. To put it another way, deep learning successfully acquires salient features that are helpful to the target task without requiring the model designers to have specialized domain expertise, which considerably improves the efficiency of creating deep learning models for tasks from many applications.
 
 - [End-to-end learning](https://towardsdatascience.com/e2e-the-every-purpose-ml-method-5d4f20dafee4) is achieved by deep learning. In the past, many machine learning models suggested [pipelines](https://www.researchgate.net/publication/332414216_Continuous_Deployment_of_Machine_Learning_Pipelines#read) for multistep solutions. To simultaneously optimise the entire system to increase performance, however, is challenging because each phase can only be addressed independently. The efficiency is also considerably decreased if any step in the model is altered because it is likely that all subsequent phases will need to be modified as well. The [featurization](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-features) ability of neural networks end-to-end learning, which feeds in the raw data as input and outputs the needed result, can overcome this problem by optimising all parameters in an organised fashion to increase accuracy. For instance, in MRC, the model inputs the text of the article and the question and outputs the text of the response. It is very simple to use and deploy, substantially simplifying the optimization process.
 
@@ -170,10 +170,8 @@ They have three main types of layers, which are:
   
      - Valid padding: This is sometimes referred to as no padding. In this situation, if dimensions do not line up, the final convolution is dropped.
        
-  
      - Same padding: By using this padding, the output layer is guaranteed to be the same size as the input layer.
        
-  
      - Full padding: This kind of padding enlarges the output by padding the input border with zeros.
   
   
@@ -429,7 +427,7 @@ To generate new images via a GAN, points can be sampled from a latent space. For
 
 ## Prompt Engineering
 
-In natural language processing (NLP), a concept known as [prompt engineering](https://arxiv.org/pdf/2109.01134v5.pdf) entails identifying inputs that produce outputs that are preferable or beneficial. In prompt engineering, the job description is included explicitly in the input, such as a question, as opposed to being provided implicitly. Typically, prompt engineering involves transforming one or more tasks into a prompt-based dataset and "prompt-based learning", also known as "prompt learning" to train a language model. Prompt engineering, also known as "prefix-tuning" or "prompt tuning," is a method wherein a big, "frozen" pretrained language model is used and just the prompt's representation is learnt. 
+In natural language processing (NLP), a concept known as [prompt engineering](https://arxiv.org/pdf/2109.01134v5.pdf) entails identifying inputs that produce outputs that are preferable or beneficial. In prompt engineering, the task description is included explicitly in the input, such as a question, as opposed to being provided implicitly. Typically, prompt engineering involves transforming one or more tasks into a prompt-based dataset and "prompt-based learning", also known as "prompt learning" to train a language model. Prompt engineering, also known as "prefix-tuning" or "prompt tuning," is a method wherein a big, "frozen" pretrained language model is used and just the prompt's representation is learnt. 
 
 Text-based prompts may be created using prompt engineering to get the desired picture categorization results. The model may be instructed to display "an picture of potatoes," for instance. Prompt engineering is fundamentally dependent on the form of such prompts, or the statement describing how the model detects pictures. Iterative writing is frequently necessary to come up with the finest prompt. A "snapshot of potatoes", "a gathering of potatoes", or the prompt "an image including potatoes" are all quite different things. 
 The quality of the inputs influences the quality of the outputs in most processes. It's more likely that the model will provide a constructive and relevant response when the prompts are well-designed. Understanding what the model "knows" about the world and then applying that knowledge appropriately are key to creating effective prompts.
@@ -440,16 +438,16 @@ When creating model prompts, a few key ideas should be kept in mind:
 
   <img src="https://docs.cohere.ai/img/prompt-engineering/summarization-prompt-language-model.png" alt="img" style="zoom: 67%;" />
 
-​                                                                   [*This prompt has two components: the text you want summarized, and the task description*](https://docs.cohere.ai/img/prompt-engineering/summarization-prompt-language-model.png)
+​                                                               [*This prompt has two components: the text that has to be summarized, and the task description*](https://docs.cohere.ai/img/prompt-engineering/summarization-prompt-language-model.png)
 
 
 
-- **To achieve the finest generations, experiment with different formulations of your prompt** - When using a generator, it might be helpful to experiment with a variety of alternative prompts for the situation at hand. Even while multiple ways of phrasing the same prompt may seem similar to humans, this might result in generations that are very distinct from one another. This may occur, for example, as a result of the model's knowledge that the various formulations are really employed in a variety of circumstances and for a variety of objectives.
+- **To achieve the finest generations, experiment with different formulations of a prompt** - When using a generator, it might be helpful to experiment with a variety of alternative prompts for the situation at hand. Even while multiple ways of phrasing the same prompt may seem similar to humans, this might result in generations that are very distinct from one another. This may occur, for example, as a result of the model's knowledge that the various formulations are really employed in a variety of circumstances and for a variety of objectives.
   If "In summary" in the preceding example doesn't provide the desired results, "To summarize altogether" or "The key takeaway from this text is that" can be used.
 
   
 
-- **Describe the assignment and the general surroundings** - Additional job description elements are frequently helpful, and they usually occur after the input text that has to be processed.
+- **Describe the assignment and the general surroundings** - Additional task description elements are frequently helpful, and they usually occur after the input text that has to be processed.
 
   <img src="https://docs.cohere.ai/img/prompt-engineering/prompt-task-description.png" alt="img" style="zoom:67%;" />
 
@@ -491,7 +489,7 @@ Response by the customer service agent: Hello, thank you for reaching out to us.
 
 <img src="https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png" alt="an example of a prompt with task description, input indicator, current input, and output indicator" style="zoom:67%;" />
 
-​    [*When using several examples in the prompt, some prompt elements (such input and output indicators) are helpful in communicating a desired job to the model*](https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png)
+[*When using several examples in the prompt, some prompt elements (such input and output indicators) are helpful in communicating a desired task to the model*](https://docs.cohere.ai/img/prompt-engineering/generation-prompt-example.png)
 
 ​		In this instance, a few customer service interactions are sufficient to obtain credible completions from the baseline model. This might be further enhanced by 		honing it using examples of how one wants the model to respond to different inquiries and requests.
 
@@ -546,7 +544,152 @@ This prompt may be seen in a more straightforward form as shown below:
 
 
 
-## Neural Style Transfer
+## Style Transfer
 
-The process of transferring a style from one picture to another while preserving the original information is known as [neural style transfer](https://www.tensorflow.org/tutorials/generative/style_transfer). To give an image creative, artistic touches, the style settings of the image are changed entirely. 
+### Transfer Learning 
+
+A model created for one task is used as the basis for another using the machine learning technique known as [transfer learning](https://arxiv.org/pdf/1911.02685.pdf). Pre-trained models are frequently utilized as the foundation for deep learning tasks in computer vision and natural language processing because they save both time and money compared to developing neural network models from scratch and because they perform far better on related tasks. This optimization enables quick development or better performance when modelling the second task. 
+
+<img src="https://assets-global.website-files.com/5d7b77b063a9066d83e1209c/616b35e31e352613b291f4c7_P46neY1rhMd5NbTxhCbaWWAnwJwhgCZjSLp2C2-6Pzf8sBEfAxtlhnAOV_Jq_gX-zOaztDWLrtFal42V-EDr86Gcd8QYrWh4uMxZ-_-X_Pd5tOge9EkBmFr7UxrEWLMwCNZi14WK%3Ds0.jpeg" alt="Transfer learning" style="zoom: 67%;" />
+
+
+
+Transfer learning is not just a topic for deep learning research; it also deals with issues like [concept drift](https://arxiv.org/pdf/2004.05785.pdf) and [multi-task learning](https://arxiv.org/pdf/2009.09796.pdf). Transfer learning, however, is often used in deep learning due to the substantial resources needed to train deep learning models or the big and difficult datasets that deep learning models are trained on. Only general model characteristics that were learnt from the initial task can be used for transfer learning in deep learning. Transfer learning is frequently used in computer vision and natural language processing applications like [sentiment analysis](https://arxiv.org/ftp/arxiv/papers/2006/2006.03541.pdf) because to the enormous amount of CPU power that is needed.
+
+Layered architectures used in deep learning systems enable the learning of various features at various layers. Higher-level characteristics are compiled at the network's outermost layers, and as we move deeper into the network, they get more precise.
+
+To obtain the final output, these layers are eventually linked to the final layer, which is often a completely connected layer in the case of supervised learning. This makes it possible to use well-known pre-trained networks, such as the [Oxford VGG Model](https://www.robots.ox.ac.uk/~vgg/research/very_deep/), [Google Inception Model](https://cloud.google.com/tpu/docs/inception-v3-advanced), and [Microsoft ResNet Model](https://www.microsoft.com/en-us/research/blog/microsoft-vision-model-resnet-50-combines-web-scale-data-and-multi-task-learning-to-achieve-state-of-the-art/) for additional tasks without relying on their last layer as a fixed feature extractor.
+
+<img src="https://miro.medium.com/max/1400/1*qfQ3hmHLwApXZBN-A85r8g.png" alt="A Comprehensive Hands-on Guide to Transfer Learning with Real-World  Applications in Deep Learning | by Dipanjan (DJ) Sarkar | Towards Data  Science" style="zoom:67%;" />
+
+​                                                               [*Transfer Learning with Pre-trained Deep Learning Models as Feature Extractors*]([1*qfQ3hmHLwApXZBN-A85r8g.png (960×439) (medium.com)](https://miro.medium.com/max/1400/1*qfQ3hmHLwApXZBN-A85r8g.png))
+
+
+
+The trick here is to use the weighted layers of the trained model to extract features, but not to change the weights of the model while training with fresh data for the new task. Pre-trained models can be used to provide a broad representation of the visual world since they were trained on sufficiently big and diverse datasets.
+
+In computer vision, neural networks generally target the first layer's detection of edges, the middle layer's detection of shapes, and the latter layers' detection of task-specific properties. Transfer learning only uses the early and center layers; the later layers are only retrained. It uses the labelled data from the task that served as its training ground.
+
+![transfer learning](D:\Documents\GitHub\art_project_documentation\documentation - mozart\transfer learning.jpg)
+
+
+
+Reduced training time, enhanced neural network performance (in most cases), and the lack of a significant quantity of data are three of transfer learning's most significant advantages. It is useful in situations when it is not always possible to get the large amounts of data required to train a neural network from scratch.
+
+<img src="https://editor.analyticsvidhya.com/uploads/35504classifiers-transfer-learning.jpeg" alt="   Why Should You Use Transfer Learning?" style="zoom:67%;" />
+
+
+
+Transfer learning can provide an effective machine learning model with very minimal training data since the model has previously been trained. This is particularly helpful in NLP, where handling vast labelled datasets necessitates a high level of expertise. Additionally, training time is shortened because it might take days or even weeks to complete a complicated task after creating a deep neural network from scratch.
+
+There are 2 common ways to implement transfer learning, they are
+
+1. **A Develop Model Approach** involving the following steps:
+
+   1. Choose the Source Task: Choose an issue involving predictive modelling that is connected, has a large amount of data, and where the input, output, and/or ideas discovered when mapping input to output data are all related in some way.
+
+   2. Build the source model: The next step is to create a proficient model for this initial assignment. To confirm that any feature learning has taken place, the model must be superior to a naïve model.
+
+   3. Reuse the model: A model on the second task of interest may be built from the model fit on the source task as a starting point. Depending on the modelling approach employed, this can include utilizing the entire model or only a portion of it.
+
+   4. Tune the model: The model might need to be modified or improved based on the input-output pair data provided for the relevant task.
+
+      
+
+2. **A Pre-Trained Model Approach** which is frequently used in deep learning, involving the following steps:
+
+   1. Choose the Source Model: One of the accessible models is a source model that has already been trained. Many research organizations publish models on sizable and difficult datasets, which may be part of the selection of potential models.
+
+   2. Reuse the model: A model on the second task of interest may then be built using the pre-trained model as a base. Depending on the modelling approach employed, this can include utilizing the entire model or only a portion of it.
+
+   3. Tune the model: On the basis of the input-output pair data available for the relevant task, the model may need to be modified or improved.
+
+      
+
+Transfer learning is a time-saving, expedient method of improving performance. Usually, it is not immediately apparent whether using transfer learning in the domain will be advantageous until after the model has been created and assessed. Hence, there are three advantages  to seek from the use of transfer learning:
+
+1. Higher start: The initial skill on the source model (prior to model refinement) is higher than it otherwise would be.
+2. Higher slope: The rate of skill growth during source model training is steeper.
+3. Higher asymptote: The trained model's converged skill is superior than what it would be without training.
+
+<img src="https://machinelearningmastery.com/wp-content/uploads/2017/09/Three-ways-in-which-transfer-might-improve-learning.png" alt="img" style="zoom: 50%;" />
+
+
+
+Transfer learning may help to create expert models for some issues where there is not a lot of data available. If there is task that is similar to one's own with a lot of data and the resources to build a model for that work and reuse it on the problem, or if there is a pre-trained model that can be used as a starting point for a new model, this approach is very much useful. The selection of the source model or data is an open problem and may call for experience-based intuition or domain knowledge.
+
+
+
+### Style Transfer
+
+A computer vision method called [style transfer](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) enables us to recompose one image's content in the manner of another. It makes hypothetical concepts, such as what a photograph could be like if it were painted by a well-known artist, a reality. 
+Style transfer is the process of combining two images - a content picture and a style reference image - so that the final output image keeps the essential components of the content image while also seeming to have been "painted" in the manner of the style reference image.
+
+<img src="https://production-media.paperswithcode.com/thumbnails/task/task-0000000002-6ec5afb9.jpg" alt="img" style="zoom: 80%;" />
+
+​                                                                                      [*The same picture (top left) in multiple different styles*](https://production-media.paperswithcode.com/thumbnails/task/task-0000000002-6ec5afb9.jpg)
+
+
+
+In the larger area of [non-photorealistic rendering](https://www.researchgate.net/publication/236973460_Non-Photorealistic_Rendering#read), style transfer is an example of picture stylization, an image processing and editing approach that has been researched for many years. 
+An original image and an artistic rendition of that original image are needed for style transfer in a conventional supervised learning technique. A machine learning model can then use the transformation on fresh original photos after learning it.
+
+Due of the rarity of certain picture combinations, this strategy is mostly unfeasible. [Neural style transfer (NST)](https://arxiv.org/pdf/1508.06576.pdf), a novel method, has altered what is achievable recently. Deep neural networks are used by NST to drive these transitions. In order to measure the effectiveness of the style transfer without the usage of explicit picture pairs, neural networks are utilized to extract statistical aspects of images that are connected to content and style. Using this enhanced method, the neural network can apply the learned style representation to original content pictures with just one style reference image.
+NST's early version, though, were not without flaws. In order to execute style transfer on a single image, the challenge was approached as an optimization problem that required hundreds or thousands of repetitions. [Fast neural style transfer](https://cs.stanford.edu/people/jcjohns/eccv16/) is a method that researchers devised to address this inefficiency. While using deep neural networks, fast style transfer trains a separate model that can alter any picture in a single feed-forward pass. Instead of using hundreds of iterations via the network, trained models can stylize any image. Modern-day style transfer models even have the capability of learning to imprint several styles using a single model, allowing for the creative editing of a single input content image in an almost limitless number of ways.
+
+
+
+### Working of Style Transfer
+
+Convolutional neural network (CNN) variants serve as the foundation for deep learning architectures that are appropriate for style transfer. Making important contrasts between various techniques can be accomplished by following the development of style transfer research. Examining the ongoing advancement of these methodologies and optimizations, from single- and multiple-style model approaches to arbitrary-style model approaches, can help in comprehending the potential of style transfer.
+
+- **Basic Framework** -  A pre-trained feature extractor and a transfer network are required for training a style transfer model. To avoid using paired training data, a feature extractor that has already been trained is employed. Its utility arises from a certain propensity of [individual deep convolutional neural network layers trained for image classification to specialize in comprehending particular aspects of a picture](https://distill.pub/2017/feature-visualization/).
+
+  <img src="https://www.fritz.ai/images/neural_network_feature_visualization.jpg" alt="Neural Network Feature Visualization" style="zoom:80%;" />
+
+  
+
+  
+
+  Some layers learn to focus on texture (the small brush strokes of a painter or the fractal patterns of nature), while others learn to extract the image's information (such as a dog's shape or a car's location). This is taken advantage of by style transfer, which processes two photos through a [pre-trained neural network](https://towardsdatascience.com/4-pre-trained-cnn-models-to-use-for-computer-vision-with-transfer-learning-885cb1b2dfc), examines the output at various levels, and assesses how similar the two images are. Images that give identical outputs at different layers of the pre-trained model indicate comparable content while matching outputs at the same layer indicate similar style.
+
+  Despite not directly assisting in producing the styled picture, the pre-trained model helps to compare the content and style of two photos. A second neural network, referred to as the transfer network, is responsible for it. The transfer network is a network that translates images, taking one picture as input and producing another image as output. In transfer networks, an encoder-decoder design is very common.
+
+  <img src="https://www.fritz.ai/images/fast_style_transfer_arch.jpg" alt="Style Transfer Model Architecture" style="zoom: 80%;" />
+
+  
+
+  The pre-trained feature extractor is first applied to one or more style pictures, and the outputs at different style layers are stored for further comparison. The machine is then given content pictures. The pre-trained feature extractor runs through each content picture, saving results at different content layers. The transfer network then generates a stylized version of the content picture. The feature extractor is likewise applied to the styled picture, and outputs at the content and style layers are stored.
+
+  The unique loss function that determines the stylized image's quality includes keywords for both content and style. While the extracted style aspects are contrasted with those from the reference style picture, the content features from the stylized image are compared to the original content image (s). Only the transfer network is updated following each step. The pre-trained feature extractor's weights remain constant throughout. We may train models to generate output pictures with lighter or greater stylization by weighing the various elements of the loss function.
+
+  
+
+- **Overview of some of the Model Architectures** - To showcase a few robust and reliable ones:
+
+  - Single style per model: The first independent neural network to be trained to stylize pictures in a single feed-forward pass was introduced in a [2016 paper by Johnson et al](https://cs.stanford.edu/people/jcjohns/eccv16/). The feature extractors are large [VGG16](https://arxiv.org/pdf/1409.1556v6.pdf) models pre-trained on ImageNet, whereas the transmission network is a relatively tiny encoder-decoder network. A separate transfer network is trained for each desired style in this method.
+  - Multiple styles per model: Researchers at Google expanded the quick style transfer method in 2017, one year after it was first released, to enable a [single transfer network to create pictures in many styles and even blend numerous styles together](https://arxiv.org/pdf/1610.07629.pdf). The inclusion of "conditional instance normalization" layers inside the network, which allowed the stylized picture generated to be conditioned on a different model input, was their significant contribution. These networks accept as input a content picture and a second vector that instructs them how much of each style to apply to the input image. So a model may, for instance, be trained on works by van Gogh, Picasso, and Matisse. The user can enter [1, 0, 0] for van Gogh, [0, 1, 0] for Picasso, or [0.33, 0.33, 0.33] for a combination of all three when it comes time to stylize an image. This is a wonderful method since it eliminates the need to train and store several models for various styles and gives users the ability to combine various styles.
+  - Arbitrary styles per model: Both single-style transfer models and multi-style transfer models have the ability to only create pictures in the styles they have previously seen during training. Without retraining the whole network, a model created using van Gogh's artwork cannot create artwork similar to Picasso's. That is altered by Huang and colleagues' arbitrary style transfer. Arbitrary style transfer models accomplish style transfer in a single, feed-forward pass using a content picture and a style image as input. In essence, the model learns how to instantly extract and apply any style to a picture.
+  - Extensions and optimizations for style transfer: A few enhancements and optimizations of style transfer are important to note:
+    - Stable style transfer comes first. A substantial degree of flickering would be present in the output of a style transfer model that had been trained before being applied to video frame by frame. Distracting temporal inconsistencies can be introduced into a video by even little frame-to-frame variations and noise. A soccer ball, for instance, could change color while in flight. Stable style transfer models address this issue by [introducing a new loss term linked to "temporal coherence"](https://arxiv.org/pdf/1807.01197.pdf), which compares the stylization of two consecutive frames in order to train the model to apply the same stylization to an item as it moves across the frame.
+    - [Color preservation](https://arxiv.org/pdf/1606.05897.pdf) is another aspect of style transfer. In certain instances, one may want to reproduce an artist's brushstrokes on a picture while keeping the original palette's colors. The input picture representation from RGB to another color space and applying style transfer exclusively to the luminance channel or using a color transfer algorithm to the final styled image are two methods that may be used to accomplish this.
+    - Lastly, though the majority of the style transfer use cases stated so far have added an aesthetic style to a picture image, it is also feasible to transmit other heuristics, like weather or time of day, between two photorealistic photographs. In order to eliminate artefacts brought about by deep convolution and [upsampling layers](https://towardsdatascience.com/transposed-convolution-demystified-84ca81b4baba), [photorealistic style transfer](https://arxiv.org/pdf/1802.06474.pdf) often necessitates adjustments to the encoder-decoder transfer network.
+
+
+
+### Importance of Style Transfer
+
+Not everyone is naturally creative. Some people are better at skills requiring touch or words. However, because to recent developments in technologies like style transfer, practically anybody may now experience the delight that comes from making and appreciating a work of art. This is where style transfer has the ability to transform. Artists are able to readily share their aesthetic sensibility with others, allowing for the coexistence of fresh and creative interpretations of many artistic movements with classic works of art. In addition to encouraging people all over the world to explore their own creativity, style transfer is crucial to the world of commercial art. An example is [Christie's recently showcased painting created by AI that fetched more than $430,000 at one of their auctions](https://www.christies.com/features/A-collaboration-between-two-artists-one-human-one-a-machine-9332-1.aspx).
+
+Style transfer is now possible for recorded and live video because to advancements in AI-accelerated technology in the cloud and on the edge. The possibilities for design, content creation, and the advancement of creative tools are unlimited thanks to this new capability.
+
+
+
+
+
+# A Platform for Generative Art
+
+
+
+
 
