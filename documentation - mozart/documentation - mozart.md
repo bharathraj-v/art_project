@@ -562,7 +562,7 @@ To obtain the final output, these layers are eventually linked to the final laye
 
 <img src="https://miro.medium.com/max/1400/1*qfQ3hmHLwApXZBN-A85r8g.png" alt="A Comprehensive Hands-on Guide to Transfer Learning with Real-World  Applications in Deep Learning | by Dipanjan (DJ) Sarkar | Towards Data  Science" style="zoom:67%;" />
 
-​                                                               [*Transfer Learning with Pre-trained Deep Learning Models as Feature Extractors*]([1*qfQ3hmHLwApXZBN-A85r8g.png (960×439) (medium.com)](https://miro.medium.com/max/1400/1*qfQ3hmHLwApXZBN-A85r8g.png))
+​                                                               [*Transfer Learning with Pre-trained Deep Learning Models as Feature Extractors*](https://miro.medium.com/max/1400/1*qfQ3hmHLwApXZBN-A85r8g.png)
 
 
 
@@ -570,7 +570,7 @@ The trick here is to use the weighted layers of the trained model to extract fea
 
 In computer vision, neural networks generally target the first layer's detection of edges, the middle layer's detection of shapes, and the latter layers' detection of task-specific properties. Transfer learning only uses the early and center layers; the later layers are only retrained. It uses the labelled data from the task that served as its training ground.
 
-![transfer learning](D:\Documents\GitHub\art_project_documentation\documentation - mozart\transfer learning.jpg)
+<img src="https://www.researchgate.net/profile/Joseph-Lemley/publication/316748306/figure/fig2/AS:491777640669185@1494260334992/Illustration-of-transfer-learning-concept-where-the-rst-layers-in-network-A-and-network-B.png" alt="Illustration of transfer learning concept where the rst layers in... |  Download Scientific Diagram" style="zoom:67%;" />
 
 
 
