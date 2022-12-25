@@ -1,7 +1,7 @@
 # Mozart: A Generative Art Platform
 
 
-Welcome to Mozart, a generative art platform that uses advanced machine learning techniques to create unique, one-of-a-kind artworks based on user text prompts. With Mozart, you can easily explore and generate new art pieces using a simple, intuitive interface.
+**Mozart** is a generative art platform that uses advanced machine learning techniques to create unique, one-of-a-kind artworks based on user text prompts. With Mozart, you can easily explore and generate new art pieces using a simple, intuitive interface.
 
 The name **Mozart** was chosen for this project because Wolfgang Amadeus Mozart is credited with creating a musical game form called **Musikalisches Würfelspiel** (Musical Dice Game), which is the oldest known example of generative art. In this game, players would roll dice to generate random numbers, which were then used to select musical phrases from a pre-determined list. These phrases were then combined to create a unique piece of music.
 
