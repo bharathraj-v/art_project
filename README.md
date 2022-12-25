@@ -49,8 +49,10 @@ To get started with Mozart, follow these steps:
 5. In the "Connect to a runtime" window, select "Runtime" and then "Change runtime type."
 6. In the "Hardware accelerator" dropdown, select "GPU" and then click the "Save" button.
 7. Click on "Run all" in Google Colaboratory to execute the code in the notebook.
-8. Follow the instructions in the notebook to generate your own art pieces using the LDM. You can choose between Normal and Better quality options, and Normal and Better resolution options to customize your art.
-9. You can also use Neural Style Transfer or Super Resolution to further customize your art.
+8. Follow the instructions in the notebook to generate your own art pieces using the LDM. 
+9. Enter the text prompt to generate your desired art. 
+10. You can choose between Normal and Better quality options and resolution option to customize your art.
+11. You can also use Neural Style Transfer or Super Resolution to further customize your art.
 
 
 ## Contact
