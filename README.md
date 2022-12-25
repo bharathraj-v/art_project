@@ -33,6 +33,11 @@ The motive for this project was to create a fun and interactive way for users to
 - Enhance the resolution of an image using Super Resolution
 - Save your favorite artworks and share them with friends
 
+## Usage
+
+To use Mozart, simply follow the instructions in the "Getting Started" section to launch the platform in Google Colaboratory. From there, you can enter a text prompt and adjust the parameters of the Latent Diffusion Model (LDM) to generate your own unique art pieces. You can also use the Neural Style Transfer and Super Resolution features to further customize your art. Save your favorite artworks and share them with friends to show off your creativity!
+
+
 ## Getting Started
 
 To get started with Mozart, follow these steps:
