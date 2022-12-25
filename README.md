@@ -17,7 +17,7 @@ Here is a screenshot of the Mozart platform:
 
 ## Motive
 
-The motive for this project was to create a fun and interactive way for users to generate unique art pieces using advanced machine learning techniques. It was also a personal project built as a way to learn and experiment with different machine learning models and techniques. This project was developed for the "Project Sprint" Competition conducted by The Turing Club and is not a real business or a website.
+The motive for this project was to create a fun and interactive way for users to generate unique art pieces using advanced machine learning techniques. It was also a personal project built as a way to learn and experiment with different machine learning models and techniques. This project was developed for the "Project Sprint" Competition conducted by The [Turing Club](https://theturingclub.in) and is not a real business or a website.
 
 ## Technologies used:
 
