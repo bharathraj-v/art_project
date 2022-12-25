@@ -24,6 +24,7 @@ The motive for this project was to create a fun and interactive way for users to
 * [Latent Diffusion](https://github.com/CompVis/latent-diffusion) for generating art from text prompts.
 * [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer) for transferring an image's style onto another image.
 * [Torch-SRGAN](https://deepai.org/machine-learning-model/torch-srgan) for Super-Resolution.
+* [Gradio 3.0](https://www.gradio.app/) for deploying the models
 
 ## Features
 
