@@ -38,6 +38,9 @@ The motive for this project was to create a fun and interactive way for users to
 
 To use Mozart, simply follow the instructions in the "Getting Started" section to launch the platform in Google Colaboratory. From there, you can enter a text prompt and adjust the parameters of the Latent Diffusion Model (LDM) to generate your own unique art pieces. You can also use the Neural Style Transfer and Super Resolution features to further customize your art. Save your favorite artworks and share them with friends to show off your creativity!
 
+## Documentation
+
+Raghavendra Dabral has written extensive documentation about the technologies behind the Mozart platform and generative art in general. For a deep dive into the technical details, check out the [Official Documentation](https://github.com/bharathraj-v/art_project/blob/main/documentation%20-%20mozart/documentation%20-%20mozart.md). For a more digestible read, check out the series of Medium articles [A Deep Dive into AI Art](https://medium.com/@raghav-i/a-deep-dive-into-ai-art-introduction-3fc811a24d45). This documentation provides a wealth of information about machine learning and generative art, and is a great resource for anyone interested in learning more about these topics. Be sure to check it out and leave a clap, follow on [Medium](https://medium.com/@raghav-i), and tell us your thoughts in the comments if you enjoyed the read and found the articles informative.
 
 ## Getting Started
 
